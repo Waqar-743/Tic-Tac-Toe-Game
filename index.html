@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Neon Tic Tac Toe</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&family=Noto+Sans:wght@300..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#FF9D00",
+            "secondary": "#ff00ff",
+            "tertiary": "#FFD700",
+            "background-light": "#fdf8f0",
+            "background-dark": "#0a0700",
+            "surface-dark": "#1a1610",
+            "neon-green": "#39ff14",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"]
+          },
+          backgroundImage: {
+            'grid-pattern': "linear-gradient(to right, #2a2010 1px, transparent 1px), linear-gradient(to bottom, #2a2010 1px, transparent 1px)",
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .text-neon-cyan {
+      text-shadow: 0 0 10px rgba(255, 157, 0, 0.7), 0 0 20px rgba(255, 157, 0, 0.5);
+    }
+    .text-neon-magenta {
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
+    }
+    .text-neon-green {
+      text-shadow: 0 0 10px rgba(57, 255, 20, 0.7), 0 0 20px rgba(57, 255, 20, 0.5);
+    }
+    .border-neon-cyan {
+      box-shadow: 0 0 5px rgba(255, 157, 0, 0.5), inset 0 0 5px rgba(255, 157, 0, 0.1);
+    }
+    .border-neon-magenta {
+      box-shadow: 0 0 5px rgba(255, 0, 255, 0.5), inset 0 0 5px rgba(255, 0, 255, 0.1);
+    }
+    .box-glow-green {
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.3), inset 0 0 20px rgba(57, 255, 20, 0.1);
+    }
+    .btn-glow {
+      box-shadow: 0 0 15px rgba(255, 157, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 25px rgba(255, 157, 0, 0.7);
+      transform: translateY(-2px);
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+    }
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 200%; }
+    }
+    .animate-shimmer {
+      animation: shimmer 1s infinite;
+    }
+    /* Custom utility for primary glow */
+    .shadow-neon-blue {
+      box-shadow: 0 0 10px rgba(255, 157, 0, 0.8), 0 0 20px rgba(255, 157, 0, 0.4);
+    }
+    .shadow-neon-pink {
+      box-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.4);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-display bg-background-dark text-white selection:bg-primary selection:text-background-dark">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
