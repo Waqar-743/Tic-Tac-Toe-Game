@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
+
 import { Player, PlayerType, MatchResult, CellValue } from '../types';
 import { INITIAL_BOARD } from '../constants';
 import ScoreCard from './ScoreCard';
