@@ -2,6 +2,10 @@
 
 A premium, neon-themed Tic Tac Toe game built with **React**, **TypeScript**, and **Tailwind CSS**. Experience the classic game with a modern, high-fidelity aesthetic and smooth animations.
 
+## 🔗 Live Demo
+[View Neon Tic Tac Toe Live](https://Waqar-743.github.io/Tic-Tac-Toe-Game/)
+
+
 ## ✨ Features
 
 - **Neon Aesthetics**: Vibrant glow effects, glassmorphism, and dynamic background grids.
