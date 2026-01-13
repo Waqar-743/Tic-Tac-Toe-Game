@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.5.0",
+    "@types/three": "^0.182.0",
+    "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react": "^19.2.3"
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

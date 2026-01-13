@@ -5,6 +5,8 @@ import SetupScreen from './components/SetupScreen';
 import GameScreen from './components/GameScreen';
 import ResultModal from './components/ResultModal';
 
+import Antigravity from './components/Antigravity';
+
 const App: React.FC = () => {
   const [gameState, setGameState] = useState<GameStatus>('SETUP');
   const [player1, setPlayer1] = useState<Player>({ name: '', wins: 0 });
@@ -53,11 +55,21 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background-dark font-display">
-      {/* Ambient Background Elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute inset-0 bg-grid-pattern bg-grid"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[128px]"></div>
+      {/* Dynamic Antigravity Background */}
+      <div className="absolute inset-0 pointer-events-none opacity-90">
+        <Antigravity
+          ringRadius={8}
+          magnetRadius={15}
+          waveAmplitude={1.5}
+          particleSize={1.2}
+          count={1600}
+          color="#e3b40d"
+          particleVariance={0.5}
+          depthFactor={0.8}
+          pulseSpeed={6.2}
+          particleShape="sphere"
+          fieldStrength={12}
+        />
       </div>
 
       <div className="w-full h-full relative z-10">
@@ -66,9 +78,9 @@ const App: React.FC = () => {
         )}
 
         {(gameState === 'PLAYING' || gameState === 'RESULT') && (
-          <GameScreen 
-            player1={player1} 
-            player2={player2} 
+          <GameScreen
+            player1={player1}
+            player2={player2}
             draws={draws}
             onRoundEnd={handleRoundEnd}
             history={history}
@@ -77,10 +89,10 @@ const App: React.FC = () => {
         )}
 
         {gameState === 'RESULT' && lastResult && (
-          <ResultModal 
-            result={lastResult} 
-            onPlayAgain={handlePlayAgain} 
-            onChangePlayers={handleChangePlayers} 
+          <ResultModal
+            result={lastResult}
+            onPlayAgain={handlePlayAgain}
+            onChangePlayers={handleChangePlayers}
           />
         )}
       </div>
