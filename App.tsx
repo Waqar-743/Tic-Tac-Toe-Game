@@ -55,26 +55,27 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background-dark font-display">
-      {/* Dynamic Antigravity Background */}
-      <div className="absolute inset-0 pointer-events-none opacity-90">
-        <Antigravity
-          ringRadius={8}
-          magnetRadius={15}
-          waveAmplitude={1.5}
-          particleSize={1.2}
-          count={1600}
-          color="#e3b40d"
-          particleVariance={0.5}
-          depthFactor={0.8}
-          pulseSpeed={6.2}
-          particleShape="sphere"
-          fieldStrength={12}
-        />
-      </div>
-
       <div className="w-full h-full relative z-10">
         {gameState === 'SETUP' && (
-          <SetupScreen onStart={handleStartGame} />
+          <>
+            {/* Dynamic Antigravity Background - Only on Setup Screen */}
+            <div className="absolute inset-0 pointer-events-none opacity-90 -z-10">
+              <Antigravity
+                ringRadius={8}
+                magnetRadius={15}
+                waveAmplitude={1.5}
+                particleSize={1.2}
+                count={1600}
+                color="#e3b40d"
+                particleVariance={0.5}
+                depthFactor={0.8}
+                pulseSpeed={6.2}
+                particleShape="sphere"
+                fieldStrength={12}
+              />
+            </div>
+            <SetupScreen onStart={handleStartGame} />
+          </>
         )}
 
         {(gameState === 'PLAYING' || gameState === 'RESULT') && (
