@@ -89,17 +89,6 @@ const GameScreen: React.FC<GameScreenProps> = ({
           </div>
         </div>
         <div className="hidden sm:flex items-center gap-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-dark border border-[#4a3a1e]">
-            {player1.wins > player2.wins ? (
-              <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(255,157,0,0.8)]"></div>
-            ) : player2.wins > player1.wins ? (
-              <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,0,255,0.8)]"></div>
-            ) : (
-              <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
-            )}
-            <span className="text-xs font-bold tracking-wider text-[#ffcc80]">ONLINE</span>
-          </div>
-          <button className="material-symbols-outlined text-[#ffcc80] hover:text-white transition-colors" onClick={onChangePlayers}>settings</button>
         </div>
 
       </header>
