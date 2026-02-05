@@ -1,12 +1,12 @@
-# 🎮 Neon Tic Tac Toe
+#  --> Neon Tic Tac Toe
 
 A premium, neon-themed Tic Tac Toe game built with **React**, **TypeScript**, and **Tailwind CSS**. Experience the classic game with a modern, high-fidelity aesthetic and smooth animations.
 
-## 🔗 Live Demo
+## --> Live Demo
 [View Neon Tic Tac Toe Live](https://Waqar-743.github.io/Tic-Tac-Toe-Game/)
 
 
-## ✨ Features
+## --> Features
 
 - **Neon Aesthetics**: Vibrant glow effects, glassmorphism, and dynamic background grids.
 - **Player Customization**: Set custom names for Player X and Player O.
@@ -15,9 +15,9 @@ A premium, neon-themed Tic Tac Toe game built with **React**, **TypeScript**, an
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
 - **Interactive UI**: Micro-animations and hover effects for a premium feel.
 
-## 🚀 Getting Started
+## --> Getting Started
 
-### Prerequisites
+### --> Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
@@ -44,7 +44,7 @@ A premium, neon-themed Tic Tac Toe game built with **React**, **TypeScript**, an
    npm run dev
    ```
 
-## 🛠️ Tech Stack
+## --> Tech Stack
 
 - **Framework**: React 19
 - **Logic**: TypeScript
@@ -53,7 +53,7 @@ A premium, neon-themed Tic Tac Toe game built with **React**, **TypeScript**, an
 - **Fonts**: Space Grotesk & Noto Sans
 - **Build Tool**: Vite
 
-## 📜 License
+## --> License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
